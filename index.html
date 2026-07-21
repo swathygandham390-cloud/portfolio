@@ -1,0 +1,382 @@
+<html>
+    <head>
+        <title>portfolio_website</title>
+        <style>
+            .navbar {
+                background-color: #0d47a1;
+                color: white;
+                padding: 15px 60px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: sticky;
+                top:0;
+                z-index: 1000;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                height:100px;
+            }
+
+            .navbar .logo {
+                font-size: 18px;
+                display: flex;
+                align-items: center;
+               padding-left: -40px;
+                gap:10px;
+                
+            }
+
+            .logo img {
+                height: 70px;
+                width: 70px;
+                gap: 20px;
+            }
+
+            .navbar nav a {
+                color: white;
+                text-decoration: none;
+                margin-left: 25px;
+                font-weight: 700;
+                font-size: 18px;
+                transition: 0.3s;
+            }
+
+            .navbar nav a:hover {
+                color: #ffca28;
+            }
+            *{margin: 0; padding: 0; box-sizing: border-box;}
+            .hero{
+                max-width: 1200px;
+                margin: 60px auto;
+                padding: 40px 20px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 40px;
+            }
+            .hero-content{
+                flex: 1;
+                max-width: 560px;
+                text-align: left;
+            }
+            .hero-image{
+                flex: 1;
+                display: flex;
+                justify-content: center;
+            }
+            .hero-image img{
+                width: 100%;
+                max-width: 320px;
+                height: 380px;
+                border-radius: 50% 50% 45% 45%;
+                object-fit: cover;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+                border: 4px solid #0d47a1;
+            }
+            .greeting{
+                color: #0d47a1;
+                font-weight: 600;
+                font-size: 25px;
+                margin-bottom: 4px;
+            }
+            .name{
+                font-size: 32px;
+                font-weight: 800;
+                line-height: 1.2;
+            }
+            .role{
+                font-size: 20px;
+                font-weight: 600;
+                margin-top: 10px;
+            }
+            .bio{
+                font-size: 13px;
+                line-height: 1.6;
+                margin-top: 14px;
+            }
+            .buttons{
+                margin-top: 25px;
+                display: flex;
+                justify-content: flex-start;
+                gap: 12px;
+            }
+            .btn{
+                padding: 10px 20px;
+                border-radius: 6px;
+                font-size: 14px;
+                font-weight: 600;
+                cursor: pointer;
+                border: none;
+                text-decoration: none;
+            }
+            .btn-primary{
+                color: black;
+                background-color: #0d47a1;
+            }
+            .btn-outline{
+                color: black;
+                border: 2px solid yellowgreen;
+                background-color: #0d47a1;
+            }
+            .about{
+                max-width: 900px;
+                margin: 60px auto;
+                padding: 0 20px;
+            }
+            .about-heading{
+                color: blue;
+                margin-bottom: 30px;
+                text-align: center;
+                font-size: 35px;
+            }
+            .about-heading span{
+                color: blue;
+
+            }
+            .cards{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+                justify-content: center;
+            }
+            .card{
+                background: pink;
+                border: 1px rgb(216, 175, 219);
+                border-radius: 10px;
+                padding: 25px;
+                flex: 1 1 380px;
+                max-width: 420px;
+            }
+            .card h3{
+                color: black;
+                margin-bottom: 15px;
+            }
+            .card p{
+                color: black;
+                line-height: 1.7;
+            }
+            .card p strong{
+                color: black;
+            }
+            .section{
+                max-width: 900px;
+                margin: 50px auto;
+                padding: 0 20px;
+
+            }
+            .section-heading{
+                color: black;
+                margin-bottom: 30px;
+                text-align: center;
+            }
+            .section-heading span{
+                color: black;
+            }
+            .timeline{
+                position: relative;
+                padding-left: 30px;
+                border-left: 3px solid pink;
+            }
+            .timeline-item{
+                position: relative;
+                margin-bottom: 30px;
+                padding-left: 20px;
+            }
+            .timeline-item::before{
+                content: '';
+                position: absolute;
+                left: -37px;
+                top: 4px;
+                width: 14px;
+                height: 14px;
+                background: yellowgreen;
+                border-radius: 50%;
+                border: 3px black;
+                box-shadow: 0 0 0 2px #2f80ed;
+            }
+            .timeline-year{
+                margin-bottom: 4px;
+            }
+            .timeline-title{
+                margin-bottom: 4px;
+                color: blue;
+            }
+            .timelinr-desc{
+                color: #2f80ed;
+                line-height: 1.5;
+            }
+            .experience-card{
+                background: rgb(243, 187, 205);
+                border: 1px black;
+                border-radius: 10px;
+                padding: 25px;
+                margin-top: 20px;
+            }
+            .experience-card h3{
+                color: black;
+                margin-bottom: 6px;
+            }
+            .experience-tag{
+                display: inline-block;
+                background: green;
+                color: black;
+                padding:3px 10px;
+                border-radius: 20px;
+                margin-bottom: 12px;
+            }
+            .experience-card p{
+                color: black;
+                line-height: 1.7;
+            }
+            .footer {
+        background: var(--primary-dark);
+        
+        color: white;
+        padding: 40px 20px 24px ;
+        margin-top: 60px;
+      }
+      .footer-content{
+        max-width: 900px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 30px;
+      }
+      .footer-col{
+        flex: 1 1 200px;
+      }
+      .footer-col h3{
+        margin-bottom: 15px;
+        color: black;
+      }
+      .footer-col p,
+      .footer-col a{
+        color: black;
+        line-height: 1.8;
+        text-decoration: none;
+        display: block;
+      }
+      .footer-col a:hover{
+        color: blue;
+      }
+      .footer-bottom{
+        text-align: center;
+        color: black;
+        margin-top: 30px;
+        padding-top: 15px;
+        border-top: 1px solid pink;
+        background-color: blue;
+        padding: 40px;
+      }
+
+        </style>
+    </head>
+    <body>
+        <header class="navbar">
+            <div class="logo">
+                
+                
+                <h4>PORTFOLIO</h4>
+            </div>
+
+            <nav>
+            <a href="index.html">HOME</a>
+            <a href="skilss..html">SKILSS</a>
+            <a href="projects.html">PROJECTS</a>
+            <a href="resume.html">RESUME</a>
+            <a href="contact.html">CONTACT</a>
+            
+            </nav>
+        </header>
+        <div class="hero">
+            <div class="hero-content">
+                <p class="greeting">Hello i'am</p>
+                <h1 class="name">Swathy Gandham</h1>
+                <p class="role">Frontend Developer</p>
+                <p class="bio">
+                <p>iam a passionate Frontend Developer who enjoys building responisvie</p>
+                <p>user-friendly website with Html,css,javascript,</p>
+                <p>While also growing my skills in software testing </p>
+                </p>
+                <div class="buttons">
+                    <a href="#resume.html" class="btn btn-outline">View resume</a>
+                    <a href="#contact.html" class="btn btn-primary">Contact Me</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="swathy.jpg" alt="Swathy Gandham">
+            </div>
+        </div>
+        <div class="about">
+            <h2 class="about-heading">About <span>Me</span></h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Peofessional Summary</h3>
+                    <p>Dedicated and detail-oriented B. Tech student specializing in Artificial Intelligence and Machine Learning, 
+with a strong foundation in programming languages such as Python and proficiency in web technologies 
+including HTML, CSS, and JavaScript. Experienced in database management using SQL. Proven problem- 
+solving abilities and effective collaboration skills demonstrated through multiple academic projects. Adept 
+at working independently and as part of a team. Eager to contribute to impactful projects in a dynamic, 
+innovative environment while continuously expanding technical knowledge and skills.</p>
+                </div>
+                <div class="card">
+                    <h3>Personal Information</h3>
+                    <p><strong>Name:</strong>Swathy Gandham</p>
+                    <p><strong>Email:</strong>swathygandham390@gmail.com</p>
+                    <p><strong>phone:</strong>+91 9701301192</p>
+                    <p><strong>country:</strong>Indian</p>
+                    <p><strong>Languages:</strong>Telugu, English</p>
+                    <p><strong>Hobbies:</strong>Cricket, Listening to music</p>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <h2 class="sectio-heading">My <span>Education</span></h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">2019 - 2022</div>
+                    <div class="timeline-title">Diploma</div>
+                    <div class="timeline-desc">Completed Diploma, building a strong foundation in core technical concepts</div>
+
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2022 - 2025</div>
+                    <div class="timeline-title">B.Tech</div>
+                    <div class="timeline-desc">Completed B.Tech, focusing on engineering fumdamentals and techinical skills development.</div>
+
+
+            </div>
+        </div>
+        </div>
+        <div class="section">
+            <h2 class="section-heading">Ongoing <span> Experience</span></h2>
+            <div class="experience-card">
+                <span class="experience-tag">Currently working</span>
+                <h3>Micro Info Web</h3>
+                <p>Working at Micro Info Web, developing frontend projects</p>
+                <p>using HTML, CSS and JAVASCRIPT Alongside project work,actively</p>
+                <p>learning java to strengthen backend and programming fundamentals.</p>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Swathy Gandham</h3>
+                    <p>Front end developer learner passionate about building responsive user-friendly web applications</p>
+
+                </div>
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <a href="mailto:swathygandham390@gmail.com">swathygandham390@gmial.com</a>
+                    <a href="tel: +91 9701301192">+91 9701301192</a>
+                    <p>India</p>
+                </div>
+
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Swathy Gandham. All rights reserved
+            </div>
+        </footer>
+        
+    </body>
+</html>
