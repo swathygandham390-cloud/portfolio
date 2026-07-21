@@ -1,0 +1,376 @@
+<html>
+    <head>
+        <title>portfolio_website</title>
+        <style>
+            .navbar {
+                background-color: #0d47a1;
+                color: white;
+                padding: 15px 60px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: sticky;
+                top:0;
+                z-index: 1000;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                height:100px;
+            }
+
+            .navbar .logo {
+                font-size: 18px;
+                display: flex;
+                align-items: center;
+               padding-left: -40px;
+                gap:10px;
+                
+            }
+
+            .logo img {
+                height: 70px;
+                width: 70px;
+                gap: 20px;
+            }
+
+            .navbar nav a {
+                color: white;
+                text-decoration: none;
+                margin-left: 25px;
+                font-weight: 700;
+                font-size: 18px;
+                transition: 0.3s;
+            }
+
+            .navbar nav a:hover {
+                color: #ffca28;
+            }
+            .resume-section{
+                max-width: 900px;
+                margin: 6-px auto;
+                padding: 0 20px;
+                text-align: center;
+            }
+            .resume-heading{
+                color: rgb(49, 42, 156);
+                font-size: 35px;
+                margin-bottom: 12px;
+
+            }
+            .resume-para{
+                max-width: 550px;
+                margin: 0 auto 40px;
+                line-height: 1.7;
+                
+            }
+            .objective-box{
+                background: rgb(230, 214, 214);
+                border: 1px rgb(17, 17, 17);
+                border-radius: 12px;
+                padding: 30px;
+                text-align: left;
+                transition: all 0.3s ease;
+            }
+            .objective-box:hover{
+                box-shadow: 0 10px 20px red;
+                transform: translateY(-5px);
+
+            }
+            .objective-title{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                color: rgb(63, 49, 189);
+                margin-bottom: 15px;
+                font-size: 25px;
+            }
+            .objective-title .dot{
+                width: 10px;
+                height: 10px;
+                background: red;
+                border-radius: 50%;
+                display: inline-block;
+            }
+            .objective-text{
+                color: black;
+                line-height: 1.8;
+            }
+            .resume-section{
+                max-width: 900px;
+                margin: 60px auto;
+                padding: 0 20px;
+            }
+            .info-box{
+                background: rgb(219, 219, 224);
+                border: 1px black;
+                border-radius: 12px;
+                padding: 30px;
+                text-align: left;
+                margin-bottom: 25px;
+                transition: all 0.3s ease;
+            }
+            .info-box:hover{
+                box-shadow: 0 10px 20px green;
+                transform: translateY(-5px);
+
+            }
+            .info-title{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                color: blue;
+                margin-bottom: 20px;
+                font-size: 30px;
+            }
+            .info-title .dot{
+                width: 10px;
+                height: 10px;
+                background: rgb(36, 84, 187);
+                border-radius: 50%;
+                display: inline-block;
+            }
+            .timeline-item{
+                position: relative;
+                padding-left: 20px;
+                border-left: 20px;
+                border-left: 2px solid rgb(58, 56, 175);
+                margin-bottom: 20px;
+                color: green;
+            }
+            .timeline-item:last-child{
+                margin-bottom: 0;
+            }
+            .timeline-item::before{
+                content: '';
+                position: absolute;
+                left: -7px;
+                top: 4px;
+                width: 12px;
+                height: 12px;
+                background: pink;
+                border-radius: 50%;
+                border: black;
+
+            }
+            .timeline-year{
+                color: rgb(39, 192, 64);
+                margin-bottom: 3px;
+                font-size: 25px;
+            }
+            .timeline-title{
+                color: blue;
+                margin-bottom: rgb(22, 22, 22);
+
+            }
+            .timeline-desc{
+                color: rgb(10, 10, 10);
+                line-height: 1.6;
+            }
+            .tag-section{
+                max-width: 900px;
+                margin: 40px auto;
+                padding: 20px;
+                
+            }
+            .tags-wrapper{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-left: 200px;
+            }
+            .tag{
+                background: pink;
+                color: black;
+                padding: 10px 20px;
+                border-radius: 30px;
+                border: black;
+                transition: all 0.3s ease;
+                cursor: default;
+            }
+            .tag:hover{
+                background: wheat;
+                color: black;
+                transform: translateY(-3px);
+            }
+             .types-wrapper{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-left: 200px;
+            }
+            .type{
+                background: pink;
+                color: black;
+                padding: 10px 20px;
+                border-radius: 30px;
+                border: black;
+                transition: all 0.3s ease;
+                cursor: default;
+            }
+            .type:hover{
+                background: wheat;
+                color: black;
+                transform: translateY(-3px);
+            }
+            .download-section{
+                max-width: 900px;
+                margin: 6px auto;
+                padding: 0 20px;
+                text-align: center;
+                background-color: #b5cdf1;
+                padding: 50px 90px;
+            }
+            .download-heading{
+                color: black;
+                margin-bottom: 10px;
+                 background-color: #b5cdf1;
+            }
+            .download-para{
+                color: rgb(12, 12, 12);
+                margin-bottom: 25px;
+            }
+            .download-btn{
+                display: inline-block;
+                align-items: center;
+                gap: 8px;
+                background: rgb(47, 6, 228);
+                color: rgb(19, 18, 18);
+                padding: 12px 26px;
+                border-radius: 8px;
+                text-decoration: none;
+                transition: all 0.3s ease;
+            }
+            .download-btn:hover{
+                background: rgb(75, 67, 194);
+                transform: translateY(-3px);
+            }
+            .download-icon{
+                font-size: 16px;
+            }
+            .footer-bottom{
+                text-align: center;
+                color: black;
+                margin-top: 30px;
+                padding-top: 15px;
+                border-top: 1px solid pink;
+                background-color: #0d47a1;
+                padding: 40px;
+            }
+            </style>
+            </head>
+
+
+
+
+<body>
+<header class="navbar">
+            <div class="logo">
+                
+                <h4>SWATHY's PORTFOLIO</h4>
+            </div>
+
+            <nav>
+            <a href="index.html">HOME</a>
+            <a href="skilss..html">SKILSS</a>
+            <a href="projects.html">PROJECTS</a>
+            <a href="resume.html">RESUME</a>
+            <a href="contact.html">CONTACT</a>
+            
+            </nav>
+        </header>
+        <div class="resume-section">
+            <h2 class="resume-heading">My Resume</h2>
+            <p class="resume-para">
+                Asummary of my education, experience, technical skills,and career objectives.
+            </p>
+            <div class="objective-box">
+                <div class="objective-title">
+                    <span class="dot"></span>
+                    Career Objective
+                </div>
+                <p class="objective-text">
+                    To work in a challenging environment where i can utilize my skillsin
+                    Frontend Development and continuosly grow as aprofessional, while
+                    contributing to the sucess and growth of the organization.
+
+                </p>
+            </div>
+        </div>
+        <div class="resume-section">
+            <div class="info-box">
+                <div class="info-title">
+                    <span class="dot"></span>
+                    Education
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2019 - 2022</div>
+                    <div class="timeline-title">Diploma</div>
+                    <div class="timeline-desc">completed Diploma , building a strong  foundation in core technical concepts</div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2022 - 2025</div>
+                    <div class="timeline-title">B.Tech</div>
+                    <div class="timeline-desc">completed B.Tech focusing on engineering fundamentals and technical skill development</div>
+                </div>
+            </div>
+            <div class="info-box">
+                <div class="info-title">
+                    <span class="dot"></span>
+                    Experience
+                    </div>
+            <div class="timeline-item">
+                <div class="timeline-year">currently working</div>
+                <div class="timeline-title">Micro Info Web</div>
+                <div class="timeline-desc">
+                    Working at microinfo web, developing frontend projects using html and css,
+                    and javascript. along side project work, actively learning java to
+                    strengthen backend and programming fundamentals
+                </div>
+                </div>
+            </div>
+        </div>
+        <center><h2 style="color: blue;">Technical Skills</h2></center>
+        <div class="tags-section">
+            <div class="tags-wrapper">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">Java script</span>
+                <span class="tag">Bootstrap</span>
+                <span class="tag">Responsive Design</span>
+                <span class="tag">Git</span>
+                <span class="tag">Github</span>
+                <span class="tag">VS code</span>
+                <span class="tag">Excel</span>
+                <span class="tag">Python</span>
+            </div>
+        </div>
+
+        <center><h2 style="color: blue;">Strengths</h2></center>
+        <div class="type-section">
+            <div class="types-wrapper">
+                <span class="tag">Time management</span>
+                <span class="tag">Adaptiblity</span>
+                <span class="tag">communication</span>
+                <span class="tag">Quick learner</span>
+                <span class="tag">problem solving</span>
+                <span class="tag">team collabration</span>
+                <span class="tag">self motivated</span>
+            </div>
+        </div>
+        <div class="download-section">
+            <h2 class="download-heading">Download Resume</h2>
+            <p class="download-para">you can downlaod my latest resume in pdf format</p>
+            <a href="SWATHY%20RESUME.pdf" download="Swathy_Gandham_Resume.pdf" class="download-btn">
+                <span class="download-icon">!</span>
+                Download Resume
+            </a>
+        </div>
+        <footer class="footer">
+            <div class="footer-bottom">
+                &copy; 2026 Swathy Gandham All Rights Reserved
+            </div>
+        </footer>
+        
+        
+
+        </body>
+        </html>
