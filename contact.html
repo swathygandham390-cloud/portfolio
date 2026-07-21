@@ -1,0 +1,232 @@
+<html>
+    <head>
+        <title>portfolio_website</title>
+        
+        <style>
+             .navbar {
+                background-color: #0d47a1;
+                color: white;
+                padding: 15px 60px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: sticky;
+                top:0;
+                z-index: 1000;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                height:100px;
+            }
+
+            .navbar .logo {
+                font-size: 18px;
+                display: flex;
+                align-items: center;
+               padding-left: -40px;
+                gap:10px;
+                
+            }
+
+            .logo img {
+                height: 70px;
+                width: 70px;
+                gap: 20px;
+            }
+
+            .navbar nav a {
+                color: white;
+                text-decoration: none;
+                margin-left: 25px;
+                font-weight: 700;
+                font-size: 18px;
+                transition: 0.3s;
+            }
+
+            .navbar nav a:hover {
+                color: #ffca28;
+            }
+            .contact-section{
+                max-width: 1000px;
+                margin: 60px auto;
+                padding: 0 20px;
+                text-align: center;
+            }
+            .contact-heading{
+                color: blue;
+                margin-bottom: 12px;
+                font-size: 30px;
+            }
+            .contact-para{
+                color: blue;
+                max-width: 500px;
+                margin: 0 auto 40px;
+                line-height: 1.7;
+            }
+            .contact-wrapper{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 30px;
+                justify-content: center;
+                text-align: left;
+            }
+            .contact-info{
+                flex: 1 1 250px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+            .info-box{
+                background: rgb(183, 221, 125);
+                border: 1px solid black;
+                border-radius: 12px;
+                padding: 20px;
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                transition: all 0.3s ease;
+            }
+            .info-box:hover{
+                background: lightgreen;
+                transform: translateY(-5px);
+            }
+            .info-text h4{
+                color: black;
+                margin-bottom: 3px;
+                transition: 0.3s ease;
+            }
+            .info-box:hover .info-text h4{
+                color: black;
+            }
+            .info-text p{
+                color: white;
+                transition: color 0.3s ease;
+            }
+            .info-box:hover .info-text p{
+                color: black;
+            }
+            .contact-form{
+                flex: 1 1 400px;
+                background: pink;
+                border: 1px solid black;
+                border-radius: 12px;
+                padding: 30px;
+
+            }
+            .contact-form input,
+            .contact-form textarea{
+                width: 100%;
+                padding: 12px 14px;
+                margin-bottom: 15px;
+                border: 1px solid yellow;
+                border-radius: 8px;
+                outline: none;
+            }
+            .contact-form input:focus,
+            .contact-form textarea:focuz{
+                border-color: red;
+            }
+            .contact-form textarea{
+                resize: vertical;
+                min-height: 100px;
+            }
+            .send-btn{
+                background: blueviolet;
+                color: black;
+                border: navy;
+                padding: 12px 28px;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: background 0.3s ease;
+            }
+            .send-btn:hover{
+                background: red;
+
+            }
+            .map-box{
+                margin-top: 40px;
+                border-radius: 12px;
+                overflow: hidden;
+                border: 1px solid #dce9fd;
+            }
+            .map-box iframe{
+                width: 100%;
+                height: 300px;
+                border: 0;
+            }
+            .footer{
+                text-align: center;
+                color: black;
+                margin-top: 30px;
+                padding-top: 15px;
+                border-top: 1px solid pink;
+                background-color: #0d47a1;
+                padding: 40px;
+            }
+            </style>
+            </head>
+
+<body>
+<header class="navbar">
+            <div class="logo">
+                
+                <h4>SWATHY's PORTFOLIO</h4>
+            </div>
+
+            <nav>
+            <a href="index.html">HOME</a>
+            <a href="skilss..html">SKILSS</a>
+            <a href="projects.html">PROJECTS</a>
+            <a href="resume.html">RESUME</a>
+            <a href="contact.html">CONTACT</a>
+            
+            </nav>
+        </header>
+        <div class="contact-section" id="contact">
+            <h2 class="contact-heading">contact me</h2>
+            <p class="contact-para">
+                Feel free to reach out for collabrations and opportinoties or just to say hello
+            </p>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="info-box">
+                        <div class="info-text">
+                            <h4>Email</h4>
+                            <p>swathygandham390@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <div class="info-text">
+                            <h4>Phone</h4>
+                            <p>+91 xxxxxxxxx</p>
+                        </div>
+
+                </div>
+                <div class="info-box">
+                        <div class="info-text">
+                            <h4>location</h4>
+                            <p>Andhra,India</p>
+                        </div>
+            </div>
+        </div>
+        <form class="contact-form">
+            <input type="text" placeholder="your name" required>
+            <input type="email" placeholder="your email" required>
+            <textarea placeholder="your massege" required></textarea>
+            <button type="submit" class="send-btn">send message</button>
+        </form>
+        </div>
+        <center><h1>My Location</h1></center>
+        <div class="map-box">
+            
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3817.5883640093543!2d80.12556887515386!3d16.896245383909587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35a845976576d3%3A0xb96b1d31d832587b!2s2-20%2C%20Chillakallu%2C%20Jaggaiahpet%2C%20Andhra%20Pradesh%20521178!5e0!3m2!1sen!2sin!4v1784623983995!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>"
+        
+        </div>
+
+        </div>
+        <footer class="footer">
+        <div class="footer-bottom">
+            &copy; 2026 Swathy Gandham. All Rightd to be Reserved
+        </div>
+        
+</footer>
+        </body>
+        </html>
