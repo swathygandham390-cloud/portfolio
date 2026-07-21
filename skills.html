@@ -1,0 +1,308 @@
+<html>
+    <head>
+        <title>portfolio_website</title>
+        
+        <style>
+             .navbar {
+                background-color: #0d47a1;
+                color: white;
+                padding: 15px 60px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: sticky;
+                top:0;
+                z-index: 1000;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                height:100px;
+            }
+
+            .navbar .logo {
+                font-size: 18px;
+                display: flex;
+                align-items: center;
+               padding-left: -40px;
+                gap:10px;
+                
+            }
+
+            .logo img {
+                height: 70px;
+                width: 70px;
+                gap: 20px;
+            }
+
+            .navbar nav a {
+                color: white;
+                text-decoration: none;
+                margin-left: 25px;
+                font-weight: 700;
+                font-size: 18px;
+                transition: 0.3s;
+            }
+
+            .navbar nav a:hover {
+                color: #ffca28;
+            }
+            .skills-section{
+                max-width: 900px;
+                margin: 60px auto;
+                padding: 0 20px;
+                text-align: center;
+            }
+            .skills-heading{
+                color: black;
+                margin-bottom: 12px;
+            }
+            .skills-heading span{
+                color: black;
+            }
+            .skills-para{
+                color: blueviolet;
+                max-width: 55px;
+                margin: 0 auto 40px;
+                line-height: 1.7;
+            }
+            .skills-boxes{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 25px;
+            }
+            .skill-box{
+                background: pink;
+                border: 1px black;
+                border-radius: 12px;
+                padding: 35px 30px;
+                width: 180px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+            .skill-box:hover{
+                background: blue;
+                transform: translateY(-8px);
+                box-shadow: 10px pink;
+            }
+            .skill-icon{
+                color: black;
+                margin-bottom: 12px;
+                transition: color 0.3s ease;
+            }
+            .skill-box:hover .skill-icon{
+                color: yellow;
+            }
+            .skill-name{
+            color: blue;
+            transition: color 0.3s ease;
+            font-size: 25px;
+            }
+            .skill-box:hover .skill-name{
+                color: green;
+            }
+            .skill-desc{
+                color: black;
+                line-height: 1.6;
+                transition: color 0.3s ease;
+            }
+            .skill-box:hover .skill-desc{
+                color: bisque;
+            }
+            .tools-section{
+                max-width: 1000px;
+                margin: 60px auto;
+                padding: 0 20px;
+                text-align: center;
+            }
+            .tools-heading{
+                color: black;
+                margin-bottom: 40px;
+            }
+
+            .tools-boxes{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 25px;
+            }
+            .tool-box{
+                background:rgb(134, 226, 222);
+                border: 1px solid black;
+                border-radius: 12px;
+                padding: 30px 25px;
+                width: 300px;
+                transition: all 0.3s ease;
+            }
+            .tool-box:hover{
+                background: rgb(157, 148, 235);
+                transform: translateY(-8px);
+                box-shadow: 0 10px 20px red;
+            }
+            .tool-icon{
+                color: blueviolet;
+                margin-bottom: 12px;
+                transition: color 0.3s ease;
+            }
+            .tool-box:hover .tool-icon{
+                color: yellow;
+            }
+            .tool-name{
+                color: blue;
+                margin-bottom: 8px;
+                transition: color 0.3s ease;
+                font-size: 25px;
+            }
+            .tool-desc{
+                line-height: 1.6;
+                transition: color 0.3s ease;
+
+                .tool-box:hover .tool-des{
+                    color: green;
+                }
+            }
+            .prof-section{
+                max-width: 1100px;
+                margin: 60px auto;
+                padding: 0 20px;
+                text-align: center;
+            }
+            .prof-heading{
+                color: blue;
+                margin-bottom: 40px;
+            }
+            .prof-boxes{
+                display: flex;
+                flex-wrap: wrap-reverse;
+                justify-content: center;
+                gap: 25px;
+            }
+            .prof-box{
+                background: #dad7d0;
+                border: 1px solid black;
+                border-radius: 12px;
+                padding: 30px 22px;
+                transition: all 0.3s ease;
+            }
+            .prof-name {
+                color: blue;
+                margin-bottom: 8px;
+                transition: color 0.3s ease;
+                font-size: 25px;
+            }
+            .prof-desc{
+                color: black;
+                line-height: 1.6;
+                transition: color 0.3s ease;
+            }
+            .footer-bottom{
+        text-align: center;
+        color: black;
+        margin-top: 30px;
+        padding-top: 15px;
+        border-top: 1px solid pink;
+        background-color: rgb(89, 89, 231);
+        padding: 40px;
+      }
+
+            
+
+
+        </style>
+        </head>
+    <body>
+        <header class="navbar">
+            <div class="logo">
+                
+                <h4>SWATHY's PORTFOLIO</h4>
+            </div>
+
+            <nav>
+            <a href="index.html">HOME</a>
+            <a href="skilss..html">SKILSS</a>
+            <a href="projects.html">PROJECTS</a>
+            <a href="resume.html">RESUME</a>
+            <a href="contact.html">CONTACT</a>
+            
+            </nav>
+        </header>
+        <div class="skills-section">
+            <h2 class="Skils-heading">My <span>Skills</span></h2>
+            <p class="skills-para">
+                <p>I enjoy working with modern frontend tools</p>
+                 <p>to build responsive and interactive websites</p> 
+                 <p> constantly improving my coding and testing abilites</p>
+                 </p>
+                <div class="skills-boxes">
+                    <div class="skill-box">
+                        <div class="skill-icon">&lt;/&gt;</div>
+                        
+                        <div class="skill-name">HTML</div>
+                        <div class="skill-desc">Used to structure web pages and oraganize content with semantic elements</div>
+
+                    </div>
+                    <div class="skill-box">
+                        <div class="skill-icon">{}</div>
+                        <div class="skill-name">CSS</div>
+                        <div class="skill-desc">Used to style layouts, colors, and design responsuve user interface.</div>
+
+                    </div>
+                    <div class="skill-box">
+                        <div class="skill-icon">JS</div>
+                        <div class="skill-name">Java script</div>
+                        <div class="skill-desc">Used to add interactivity,logic, and dynamic behaviour to websites</div>
+
+                    </div>
+                </div>
+        </div>
+                </div>
+        <div class="tools-section">
+            <h2 class="tools-heading">Tools & <span>Technologies</span></h2>
+            <div class="tools-boxes">
+                <div class="tool-box">
+                    <div class="tool-icon">^/</div>
+                    <div class="tool-name">Git</div>
+                    <div class="tool-desc">used for version control to track changes and manage code efficiently.</div>
+
+            </div>
+            <div class="tool-box">
+                    <div class="tool-icon">^/</div>
+                    <div class="tool-name">GitHub</div>
+                    <div class="tool-desc">used for host respositories, collaborate, and manage project versions online..</div>
+
+            </div>
+            <div class="tool-box">
+                    <div class="tool-icon">^/</div>
+                    <div class="tool-name">VS</div>
+                    <div class="tool-desc">My primary code editor for writting and debugging, and testing frontend projects.</div>
+
+            </div>
+
+        </div>
+        </div>
+        <div class="prof-section">
+            <h2 class="prof-heading">Professional skills</h2>
+            <div class="prof-boxes">
+                <div class="prof-box">
+                    <div class="prof-name">Communication</div>
+                    <div class="prof-desc">Clear and effecttive communication with team members and stackholders</div>
+                </div>
+                <div class="prof-box">
+                    <div class="prof-name">Teamwork</div>
+                    <div class="prof-desc">Collabrating well within a team to achieve project goals</div>
+                </div>
+                <div class="prof-box">
+                    <div class="prof-name">Clients</div>
+                    <div class="prof-desc">understanding client requirements and delivering solutions that meet their needs.</div>
+                </div>
+                <div class="prof-box">
+                    <div class="prof-name">Team mangemnet</div>
+                    <div class="prof-desc">Coordinating tasks and guiding team efforts to meet deadlines</div>
+                </div>
+
+            </div>
+        </div>
+        <div class="footer-bottom">
+                &copy; 2026 Swathy Gandham. All rights reserved
+            </div>
+        
+        </body>
+        </html>
